@@ -4,10 +4,10 @@ const path = require('path');
 const { cwd } = require('node:process');
 const { isChange, isConflict } = require('./utils');
 
-execSync(`git pull`);
-console.log(`git pull`);
+// execSync(`git pull`);
+// console.log(`git pull`);
 
-require('./pull');
+// require('./pull');
 
 if (isConflict()) {
   console.log('has conflict');
@@ -18,7 +18,7 @@ try {
 } catch (e) {
   console.log(e);
 }
-
+return;
 fs.readdir(cwd(), (error, files) => {
   if (error) {
     console.log(`error: ${error.message}`);
