@@ -1,4 +1,4 @@
-# codehub-microserve-spider
+# @microserves/codehub-spider
 
 ## 2.0.0
 

@@ -1,4 +1,4 @@
-# codehub-microserve-search
+# @microserves/codehub-search
 
 ## 2.0.0
 

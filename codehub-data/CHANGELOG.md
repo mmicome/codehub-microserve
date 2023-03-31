@@ -1,4 +1,4 @@
-# codehub-microserve-data
+# @microserves/codehub-data
 
 ## 2.0.0
 

@@ -1,4 +1,4 @@
-# codehub-microserve-test
+# @microserves/codehub-test
 
 ## 2.0.0
 

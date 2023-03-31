@@ -1,4 +1,4 @@
-# codehub-microserve-resource
+# @microserves/codehub-resource
 
 ## 2.0.0
 

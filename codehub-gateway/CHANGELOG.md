@@ -1,4 +1,4 @@
-# codehub-microserve-gateway
+# @microserves/codehub-gateway
 
 ## 2.0.0
 

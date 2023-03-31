@@ -1,4 +1,4 @@
-# codehub-microserve-commons
+# @microserves/codehub-commons
 
 ## 2.0.0
 

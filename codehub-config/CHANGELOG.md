@@ -1,4 +1,4 @@
-# codehub-microserve-config
+# @microserves/codehub-config
 
 ## 2.0.0
 
