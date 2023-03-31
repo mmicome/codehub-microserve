@@ -7,7 +7,7 @@
   "scripts": {
     "commit": "cz",
     "build": "pnpm -r --filter './codehub-*...' build",
-    "clear": "rimraf 'codehub-*/{dist,node_modules}' -g",
+    "clear": "rimraf 'codehub-*/{dist,node_modules}' -g && rimraf ./node_modules",
     "test": "echo init",
     "dev": "pnpm -r --filter './codehub-*...' watch",
     "lint": "eslint --resolve-plugins-relative-to . --ext .js,.ts --cache .",
@@ -21,7 +21,7 @@
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "ci-publish": "",
     "changeset": "changeset",
-    "version-packages": "changeset version"
+    "changeset:version": "cross-env GITHUB_TOKEN=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 changeset version"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "commitizen": "^4.3.0",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.36.0",
     "husky": "^8.0.3",

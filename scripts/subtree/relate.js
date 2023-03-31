@@ -1,20 +1,6 @@
 const { execSync } = require('child_process');
 const { isChange, isConflict } = require('./utils');
-
-const modules = [
-  'codehub-commons',
-  'codehub-config',
-  'codehub-data',
-  'codehub-gateway',
-  'codehub-monitor',
-  'codehub-resource',
-  'codehub-search',
-  'codehub-sms',
-  'codehub-spider',
-  'codehub-test',
-  'codehub-utils',
-];
-
+const { modules } = require('../constant/repo');
 
 const remote = execSync(`git remote`).toString('utf8').split('\n');
 if (isConflict()) {
@@ -37,7 +23,6 @@ modules.forEach((module) => {
     // console.log(e);
   }
   try {
-
     isChange() && !isConflict() && execSync(`git add . && git commit -m "initial" && git push`);
   } catch (e) {
     // console.log(e);

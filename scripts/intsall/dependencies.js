@@ -5,20 +5,7 @@
 
 const { exec } = require('child_process');
 const process = require('node:process');
-
-const modules = [
-  'codehub-commons',
-  'codehub-config',
-  'codehub-data',
-  'codehub-gateway',
-  'codehub-monitor',
-  'codehub-resource',
-  'codehub-search',
-  'codehub-sms',
-  'codehub-spider',
-  'codehub-test',
-  'codehub-utils',
-];
+const { modules } = require('../constant/repo');
 
 const params = process.argv.slice(2);
 if (!params || params.length === 0) return;
