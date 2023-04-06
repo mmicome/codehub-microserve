@@ -1,7 +1,7 @@
 import router from '@router/index';
 import { DefaultContext } from 'koa';
 import db from '@database/index';
-import { User } from '@model/mysql/User.entity';
+import User from '@model/mysql/User';
 
 router.get('/user/mysql/save', async (ctx: DefaultContext) => {
   const user = new User();
@@ -12,11 +12,12 @@ router.get('/user/mysql/save', async (ctx: DefaultContext) => {
   ctx.body = 'OK';
 });
 router.get('/user/mysql/all', async (ctx: DefaultContext) => {
+  console.log(ctx.request.header);
   const users = await db.mysql.manager.find(User);
   ctx.body = users;
 });
 
-router.get('/user/mysql/:name', async (ctx: DefaultContext) => {
+router.get('/user/mysql/name/:name', async (ctx: DefaultContext) => {
   const users = await db.mysql.getRepository(User).findBy({ name: ctx.params.name });
   ctx.body = users;
 });

@@ -6,6 +6,6 @@ export const config: IConfig = {
   port: parseInt(process.env.NODE_PORT, 10) || 3003,
 };
 
-export { db as mysql } from './data-source-mysql';
+export { db as mysql } from './mysql';
 
-export { db as mongodb } from './data-source-mongodb';
+export { db as mongodb } from './mongodb';

@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
 import path from 'path';
-const entities = path.resolve(__dirname, '../model/mongodb/*.entity.{ts,js}');
+const entities = path.resolve(__dirname, '../model/mongodb/*.{ts,js}');
 
 export const db = new DataSource({
   type: 'mongodb',
@@ -10,6 +10,6 @@ export const db = new DataSource({
   password: '',
   useUnifiedTopology: true,
   database: 'test',
-  logging: ['error'], //"query",
+  logging: ['error', 'query'], //"query",
   entities: [entities],
 });

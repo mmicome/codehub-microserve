@@ -1,7 +1,7 @@
 import router from '@router/index';
 import { DefaultContext } from 'koa';
 import db from '@database/index';
-import { User } from '@model/mongodb/User.entity';
+import User from '@model/mongodb/User';
 
 router.get('/user/mongodb/save', async (ctx: DefaultContext) => {
   const user = new User();

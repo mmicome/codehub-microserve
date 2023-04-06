@@ -1,4 +1,4 @@
-export const modules = [
+exports.modules = [
   'codehub-commons',
   'codehub-config',
   'codehub-data',
